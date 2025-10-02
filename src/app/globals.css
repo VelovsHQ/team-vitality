@@ -1,0 +1,102 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #1a1a1a;
+  --gold: #c5a572; /* muted luxury gold */
+  --beige: #f7f2ea; /* warm off-white */
+  --muted: #8a8a8a;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-gold: var(--gold);
+  --color-beige: var(--beige);
+  --color-muted: var(--muted);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+  --font-display: var(--font-display);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b0b0b;
+    --foreground: #f0f0f0;
+    --beige: #151514;
+    --muted: #a6a6a6;
+  }
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: var(--font-geist-sans), system-ui, -apple-system, Segoe UI,
+    Roboto, Helvetica, Arial, "Apple Color Emoji", "Segoe UI Emoji";
+  scroll-behavior: smooth;
+}
+
+/* Base luxury styles */
+.container {
+  max-width: 1200px;
+  margin-inline: auto;
+  padding-inline: 24px;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 18px;
+  border-radius: 9999px;
+  border: 1px solid color-mix(in oklab, var(--gold) 55%, transparent);
+  background: linear-gradient(180deg, #ffffff, #faf8f5);
+  color: #1a1a1a;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.06), inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+  transition: transform 200ms ease, box-shadow 200ms ease, background 200ms ease;
+}
+.btn:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+.gold-text {
+  color: var(--gold);
+}
+
+.section {
+  padding-block: 96px;
+}
+
+.headline {
+  font-family: var(--font-display), serif;
+  letter-spacing: -0.01em;
+}
+
+.subtle {
+  color: var(--muted);
+}
+
+.card {
+  border-radius: 16px;
+  border: 1px solid rgba(197, 165, 114, 0.25);
+  background: linear-gradient(180deg, rgba(255,255,255,0.9), rgba(247,242,234,0.6));
+  backdrop-filter: blur(6px);
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+}
+
+.nav-blur {
+  backdrop-filter: saturate(180%) blur(10px);
+  background: color-mix(in oklab, var(--beige) 70%, rgba(255,255,255,0.7));
+  border-bottom: 1px solid rgba(197,165,114,0.3);
+}
+
+/* Simple fade + slide animations */
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.animate-in {
+  animation: fadeUp 700ms ease forwards;
+}
