@@ -57,7 +57,7 @@ export default function Home() {
             style={{ animationDelay: "80ms" }}
           >
             <Image
-              src="/uploads/background/hero.jpg"
+              src="/uploads/background/BG.png"
               alt="Background"
               fill
               priority
@@ -72,10 +72,11 @@ export default function Home() {
         <div className="container grid md:grid-cols-3 gap-8 items-start">
           <h2 className="headline text-2xl md:text-3xl">About</h2>
           <p className="md:col-span-2 leading-relaxed text-balance">
-            We are a university team passionate about designing and building
-            elegant, reliable products. We value clarity, craftsmanship, and
-            collaboration. From rapid prototypes to polished demos, we deliver
-            high-impact experiences with minimal complexity and premium feel.
+            We are a passionate NSBM Green University hackathon team, driven by
+            innovation and collaboration. We thrive on creating sustainable,
+            impactful solutions, turning ideas into functional prototypes while
+            learning and growing together. Our focus is teamwork, creativity,
+            and delivering projects that make a difference.
           </p>
         </div>
       </section>
@@ -87,19 +88,19 @@ export default function Home() {
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-6">
             {[
               {
-                name: "Jane Doe",
-                role: "Team Lead / Frontend",
-                img: "/uploads/members/jane.jpg",
+                name: "SENUKA CHANDUNU",
+                role: "",
+                img: "/uploads/members/senuka.jpg",
               },
               {
-                name: "John Smith",
-                role: "Backend / DevOps",
-                img: "/uploads/members/john.jpg",
+                name: "OSHADA RASHMIKA",
+                role: "",
+                img: "/uploads/members/oshada.jpg",
               },
               {
-                name: "Ava Chen",
-                role: "UI/UX Designer",
-                img: "/uploads/members/ava.jpg",
+                name: "ASILA RANASINGHE",
+                role: "",
+                img: "/uploads/members/asila.jpg",
               },
             ].map((m) => (
               <div className="card p-4" key={m.name}>
@@ -131,19 +132,19 @@ export default function Home() {
           <div className="grid md:grid-cols-3 gap-6">
             {[
               {
-                title: "Velovs Portal",
-                desc: "A streamlined hub with elegant UI and secure auth.",
-                img: "/uploads/background/project1.jpg",
+                title: "",
+                desc: "",
+                img: "/uploads/projects/project1.jpg",
               },
               {
-                title: "Hackathon Toolkit",
-                desc: "Reusable components for rapid prototyping.",
-                img: "/uploads/background/project2.jpg",
+                title: "",
+                desc: "",
+                img: "/uploads/projects/project2.jpg",
               },
               {
-                title: "Insight Dashboard",
-                desc: "Minimal analytics with premium visuals.",
-                img: "/uploads/background/project3.jpg",
+                title: "",
+                desc: "",
+                img: "/uploads/projects/project3.jpg",
               },
             ].map((p) => (
               <div className="card overflow-hidden" key={p.title}>
@@ -164,41 +165,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
-      {/* Contact */}
-      <section id="contact" className="section">
-        <div className="container grid md:grid-cols-2 gap-8 items-start">
-          <div>
-            <h2 className="headline text-2xl md:text-3xl">Contact</h2>
-            <p className="subtle mt-2">
-              We’ll get back to you within 2-3 days.
-            </p>
-          </div>
-          <form className="card p-4 grid gap-3">
-            <input
-              className="border rounded-md px-3 py-2 bg-white/80"
-              placeholder="Name"
-              required
-            />
-            <input
-              className="border rounded-md px-3 py-2 bg-white/80"
-              type="email"
-              placeholder="Email"
-              required
-            />
-            <textarea
-              className="border rounded-md px-3 py-2 bg-white/80"
-              rows={4}
-              placeholder="Message"
-              required
-            />
-            <button className="btn" type="submit">
-              Send
-            </button>
-          </form>
-        </div>
-      </section>
-
       <footer className="py-10">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="subtle text-sm">
