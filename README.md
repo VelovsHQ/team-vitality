@@ -1,1 +1,1 @@
-# team-vitality
+Team Vitality – a student hackathon team, powered by Velovs IT
