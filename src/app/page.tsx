@@ -165,6 +165,29 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {/* Contact */}
+      <section id="contact" className="section">
+        <div className="container grid md:grid-cols-3 gap-8 items-start">
+          <h2 className="headline text-2xl md:text-3xl">Contact</h2>
+          <div className="md:col-span-2">
+            <div className="card p-5">
+              <p className="leading-relaxed subtle">
+                Have a question, collaboration idea, or want to invite us to a
+                hackathon? Reach out and we’ll get back to you.
+              </p>
+              <div className="mt-5 grid sm:grid-cols-2 gap-3">
+                <a href="mailto:" className="btn w-full text-center">
+                  Email us
+                </a>
+                <a href="#" className="btn w-full text-center" aria-disabled>
+                  Connect on socials
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
       <footer className="py-10">
         <div className="container flex flex-col sm:flex-row items-center justify-between gap-4">
           <div className="subtle text-sm">
